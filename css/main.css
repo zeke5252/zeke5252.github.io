@@ -1,0 +1,223 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0rem;
+}
+
+::-moz-selection {
+  background-color: #1089ff;
+  color: #fff;
+}
+
+::selection {
+  background-color: #1089ff;
+  color: #fff;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #23374d;
+}
+
+.row {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .row:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .row {
+    max-width: 50rem;
+    padding: 0 0;
+  }
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .row [class^="col-"] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .row [class^="col-"] {
+    width: 100% !important;
+  }
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 2rem) / 2);
+  background-color: orangered;
+  float: left;
+}
+
+.row .col-1-of-2:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.container {
+  max-width: 120rem;
+  min-width: 50rem;
+  margin: 0 auto;
+}
+
+.header-logo {
+  margin: auto 1rem;
+}
+
+.header-logoImg {
+  width: 4.1rem;
+  height: 1.6rem;
+}
+
+.header-head {
+  font-size: 1.5rem;
+  color: white;
+  background-color: #23374d;
+  padding: .5rem;
+  margin: 0 auto;
+  height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.header-menu {
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  display: none;
+}
+
+@media only screen and (max-width: 50em) {
+  .header-menu {
+    display: block;
+  }
+}
+
+.header-nav {
+  margin: auto 1rem;
+}
+
+@media only screen and (max-width: 50em) {
+  .header-nav {
+    display: none;
+  }
+}
+
+.header-ul li {
+  display: inline;
+  margin: auto 1rem;
+}
+
+.header-slogan {
+  width: 100%;
+  background-color: #e5e5e5;
+  padding: 6rem;
+}
+
+.header-text {
+  width: 100%;
+  height: 30%;
+  font-size: 4rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.main-content {
+  background-color: #eee;
+  padding: 2.4rem;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.main-button {
+  display: inline-block;
+  width: 24rem;
+  padding: 1rem;
+  background-color: white;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  margin-top: .5rem;
+}
+
+.main-box {
+  font-size: 2rem;
+  height: 18vh;
+  background-color: white;
+  padding: 2rem;
+}
+/*# sourceMappingURL=main.css.map */

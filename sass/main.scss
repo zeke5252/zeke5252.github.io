@@ -1,0 +1,100 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+
+@import "layout/grid";
+
+@import "pages/home";
+
+.container {
+    max-width: 120rem; 
+    min-width: 50rem; 
+    margin: 0 auto;
+}
+.header-logo {
+    margin:auto 1rem;
+}
+
+.header-logoImg {
+    width: 4.1rem;
+    height: 1.6rem;
+}
+
+.header-head {
+    font-size: 1.5rem;
+    color: white;
+    background-color: $color-primary-dark;
+    padding: .5rem;
+    margin: 0 auto;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+};
+.header-menu {
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    display: none;
+    @include respond(tab-port){
+        display: block;
+    }
+}
+.header-nav {
+    margin: auto 1rem;
+    @include respond(tab-port){
+        display: none;
+    };
+}
+.header-ul {
+    li {
+        display: inline;
+        margin: auto 1rem;
+    }
+}
+.header-slogan {
+    width: 100%;
+    background-color:$color-grey-light;
+    padding: 6rem;
+}
+.header-text {
+    width:100%;
+    height:30%;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 auto ;
+}
+.main-content {
+    background-color: $color-grey-lighter;
+    padding: 2.4rem;
+    text-align: center;
+}
+.main-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+.main-button {
+    display: inline-block;
+    width: 24rem;
+    padding: 1rem;
+    background-color: white;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    margin-top: .5rem;
+}
+.main-box {
+    font-size: 2rem;
+    height: 18vh;
+    background-color: white;
+    padding: 2rem;
+}
