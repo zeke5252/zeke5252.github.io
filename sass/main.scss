@@ -27,6 +27,12 @@
     height: 1.6rem;
 }
 
+.header-closeImg {
+    float: right;
+    width: 2rem;
+
+}
+
 .header-head {
     font-size: 1.5rem;
     color: white;
@@ -55,12 +61,34 @@
         display: none;
     };
 }
+
+.header-nav-mobile {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: 100vh;
+    padding: 3rem;
+    margin: 0;
+    background-color: rgba($color-primary-dark, 1);
+}
+
 .header-ul {
     li {
         display: inline;
         margin: auto 1rem;
     }
 }
+
+.header-ul-mobile {
+    font-size: 3rem;
+    list-style: none; 
+        li {
+            padding:1rem 0
+        }
+}
+
 .header-slogan {
     width: 100%;
     background-color:$color-grey-light;

@@ -41,6 +41,8 @@
             margin-right: $gutter-horizontal;
         }
     }
-
-
+    //Hide the boxes which exceed the height of the window
+    &:nth-child(4),&:nth-child(5),&:nth-child(6) {
+        display: none;
+    }
 }
