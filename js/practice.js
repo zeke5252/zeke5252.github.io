@@ -18,16 +18,8 @@
 
 //test2
 
-// function calculate(args){
-//      let result; 
-//      if(args.op==="+"){ 
-//          result=args.n1+args.n2; 
-//         }else if(args.op==="-"){ 
-//             result=args.n1-args.n2; 
-//         }else{ 
-//             result="Not supported"; 
-//         } return result; 
-//     } 
+
+
 
 // Try to call calculate function correctly 
 /* For example, if we have an add function like this: 
@@ -37,18 +29,39 @@ add({n1:3, n2:4}); // your first way
 You should find another way to create a proper object.  
 // your second way */ 
 
-//創造一個物件，裏頭有可以帶入運算符號，以及兩個字串或數值
+function calculate(args){
+    let result; 
+    if(args.op==="+"){ 
+        result=args.n1+args.n2; 
+       }else if(args.op==="-"){ 
+           result=args.n1-args.n2; 
+       }else{ 
+           result="Not supported"; 
+       } return result; 
+   } 
 
-// function createObj(op, n1, n2) {
-//     let obj={};
-//     obj.op = op;
-//     obj.n1 = n1;
-//     obj.n2 = n2;
-// console.log(obj);
-// return obj;
-// }
+//first way
+function createObj(op, n1, n2) {
+    let obj={};
+    obj.op = op;
+    obj.n1 = n1;
+    obj.n2 = n2;
+return obj;
+}
+console.log('first way > ', calculate(createObj('+', 4, 5)));
 
-// createObj("+",5, 6);
+//second way
+class CreateObj2 {
+    constructor(op, n1, n2){
+        this.op = op;
+        this.n1 = n1;
+        this.n2 = n2;
+    }
+}
+let newObj = new CreateObj2('+', 4, 5) 
+console.log('second way > ', calculate(newObj));
+
+
 
 //test3
 
