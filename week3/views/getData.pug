@@ -4,9 +4,9 @@ html(lang="en")
 head
   title Data manipulation
 body
-  if total && !Number(total)
+  if (typeof arr === 'string') && !Number(arr) 
     h1 Wrong Parameter
-  else if total && Number(total)
+  else if total && Number(arr)
     h1= total
-  else
+  else if (typeof arr === 'undefined')
     h1 Lack of Parameter
