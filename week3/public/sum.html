@@ -15,15 +15,27 @@
                 };
                 xhr.open('GET','http://localhost:3000/getData?number=10');
                 xhr.send();
+
+            function calcNum(){
+                let xhr2 = new XMLHttpRequest();
+                xhr2.onreadystatechange = function(){
+                    if(xhr2.readyState === 4 && xhr2.status === 200){
+                        document.getElementById('loadNumber2').innerHTML = xhr2.responseText;
+                    }
+                };
+                let yourNum = document.getElementById('yourNumber');
+                console.log(typeof yourNum.value);
+                xhr2.open('GET','getData?number='+ yourNum.value);
+                xhr2.send();
+            };
         </script>
     </head>
     <body>
             <h1 id='loadNumber'>Sum will be here</h1>
-            <form action="/getData", method="post">
                 <label> Please enter your number:</label>
-                <input type="text" name="yourNumber">
-                <button type="submit"> Submit </button>
-            </form>
+                <input type="text" id="yourNumber">
+                <button type="submit" onclick="calcNum()"> Submit </button>
+            <h2>The answer will be... <span id=loadNumber2></span></h2>
     </body>
 
 </html>

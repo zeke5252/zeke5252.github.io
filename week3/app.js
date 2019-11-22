@@ -13,10 +13,6 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.get('/sum.html', (req, res) => {
-
-});
-
 app.get('/getData', (req, res) => {
     total = 0;
     let arr = req.query.number;
@@ -24,15 +20,6 @@ app.get('/getData', (req, res) => {
         total+=i;
     }
     res.render('getData', {total, arr});
-});
-
-app.post('/getData', (req, res) => {
-    total2= 0;
-    let arr = req.body.yourNumber;
-    for(let i=0; i<=arr; i++){
-        total2+=i;
-    }
-    res.render('result',{total2})
 });
 
 app.listen(3000, () => {
