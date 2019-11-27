@@ -1,118 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Bitter:400,500,600,700" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        <title>Zeke Lin's practice website</title>
-    </head>
-    <body>
-        <div class="container">
-            <header>
-                <header class="header-head">
-                    <div class="header-logo">
-                        <span class="header-title">Zeke's creative website</span>
-                        <img src="img/logo.svg"" alt="logo" title="Logo designed by Zeke" class="header-logoImg">
-                    </div>
-                    <img src="img/menu.svg" alt="" class="header-menu">
-                    <nav class="header-nav-mobile displaySwitch">
-                        <img src="img/close.svg"" alt="close" title="icon designed by Zeke" class="header-closeImg">
-                        <ul class="header-ul-mobile">
-                            <li>About</li>
-                            <li>Works</li>
-                            <li>Experiences</li>
-                            <li>Contact me</li>
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="header-ul">
-                            <li>About</li>
-                            <li>Works</li>
-                            <li>Experiences</li>
-                            <li>Contact me</li>
-                        </ul>
-                    </nav>
-                </header>
-                <div class="header-slogan">
-                    <div class="header-text" id="header-welcome">
-                        "Helloooooooooo~welcome to my site"
-                    </div>
-                </div>
-            </header>
-            <main class="main-container">
-                <section class="main-content">
-                    <h2 class="main-title">Section title</h2>
-                    <div class="row">
-                        <div class="col-1-of-2">
-                            <div class="main-box">
-                                Content box1 
-                            </div>
-                        </div>
-                        <div class="col-1-of-2">
-                            <div class="main-box">
-                                Content box2 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1-of-2">
-                            <div class="main-box">
-                                Content box3 
-                            </div>                    
-                        </div>
-                        <div class="col-1-of-2">
-                            <div class="main-box">
-                                Content box4 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1-of-2">
-                            <div class="main-box">
-                                Content box5 
-                            </div>                    
-                        </div>
-                        <div class="col-1-of-2">
-                            <div class="main-box">
-                                Content box6 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1-of-2">
-                            <div class="main-box">
-                                Content box7 
-                            </div>                    
-                        </div>
-                        <div class="col-1-of-2">
-                            <div class="main-box">
-                                Content box8 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1-of-2">
-                            <div class="main-box">
-                                Content box9 
-                            </div>                    
-                        </div>
-                        <div class="col-1-of-2">
-                            <div class="main-box">
-                                Content box10 
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="main-button">
-                        Call to action
-                    </a>
-                </section>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeke Lin's practice website</title>
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script type="text/babel" src="js/web.js"></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-            </main>
-        </div>
-        <script src="js/web.js"></script>
-        <script src="js/practice.js"></script>
-    </body>
+  </head>
+  <body>
+    <div id="root"></div>
 
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      Read this section for a production-ready setup with JSX:
+      https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
+
+      In a larger project, you can use an integrated toolchain that includes JSX instead:
+      https://reactjs.org/docs/create-a-new-react-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      https://reactjs.org/docs/react-without-jsx.html
+    -->
+  </body>
 </html>
