@@ -1,0 +1,15 @@
+doctype html
+
+html(lang="en")
+head
+  title sum
+body
+  h1 sum is #{total}
+  if resultNum
+    h2 #{resultNum}
+  else
+    form(action='/getData', method='post')
+      label Please enter your number:
+        input(type='text',name='yourNumber')
+        button(type='submit') Submit
+

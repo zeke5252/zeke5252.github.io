@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zeke Lin's practice website</title>
+        <script>
+            //Assignment 3-2
+                let xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState === 4 && xhr.status === 200){
+                        //console.log('xhr=', xhr.responseText )
+                        document.getElementById('loadNumber').innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.open('GET','http://localhost:3000/getData?number=10');
+                xhr.send();
+
+            function calcNum(){
+                let xhr2 = new XMLHttpRequest();
+                xhr2.onreadystatechange = function(){
+                    if(xhr2.readyState === 4 && xhr2.status === 200){
+                        document.getElementById('loadNumber2').innerHTML = xhr2.responseText;
+                    }
+                };
+                let yourNum = document.getElementById('yourNumber');
+                console.log(typeof yourNum.value);
+                xhr2.open('GET','getData?number='+ yourNum.value);
+                xhr2.send();
+            };
+        </script>
+    </head>
+    <body>
+            <h1 id='loadNumber'>Sum will be here</h1>
+                <label> Please enter your number:</label>
+                <input type="text" id="yourNumber">
+                <button type="submit" onclick="calcNum()"> Submit </button>
+            <h2>The answer will be... <span id=loadNumber2></span></h2>
+    </body>
+
+</html>
