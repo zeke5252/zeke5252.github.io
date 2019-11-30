@@ -56,73 +56,135 @@ body {
   display: block !important;
 }
 
-.row {
+.row-show {
   max-width: 100rem;
   margin: 0 auto;
 }
 
-.row:not(:last-child) {
+.row-show:not(:last-child) {
   margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 31.25em) {
-  .row:not(:last-child) {
+  .row-show:not(:last-child) {
     margin-bottom: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 31.25em) {
-  .row {
+  .row-show {
     max-width: 50rem;
     padding: 0 0;
   }
 }
 
-.row::after {
+.row-show::after {
   content: "";
   display: table;
   clear: both;
 }
 
-.row [class^="col-"] {
+.row-show [class^="col-"] {
   float: left;
 }
 
-.row [class^="col-"]:not(:last-child) {
+.row-show [class^="col-"]:not(:last-child) {
   margin-right: 2rem;
 }
 
 @media only screen and (max-width: 31.25em) {
-  .row [class^="col-"]:not(:last-child) {
+  .row-show [class^="col-"]:not(:last-child) {
     margin-right: 0;
     margin-bottom: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 50em) {
-  .row [class^="col-"] {
+  .row-show [class^="col-"] {
     margin-bottom: 0;
   }
 }
 
 @media only screen and (max-width: 31.25em) {
-  .row [class^="col-"] {
+  .row-show [class^="col-"] {
     width: 100% !important;
   }
 }
 
-.row .col-1-of-2 {
+.row-show .col-1-of-2 {
   width: calc((100% - 2rem) / 2);
   background-color: orangered;
   float: left;
 }
 
-.row .col-1-of-2:not(:last-child) {
+.row-show .col-1-of-2:not(:last-child) {
   margin-right: 2rem;
 }
 
-.row:nth-child(4), .row:nth-child(5), .row:nth-child(6) {
+.row-hide {
+  max-width: 100rem;
+  margin: 0 auto;
   display: none;
+}
+
+.row-hide:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .row-hide:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .row-hide {
+    max-width: 50rem;
+    padding: 0 0;
+  }
+}
+
+.row-hide::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row-hide [class^="col-"] {
+  float: left;
+}
+
+.row-hide [class^="col-"]:not(:last-child) {
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 31.25em) {
+  .row-hide [class^="col-"]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .row-hide [class^="col-"] {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .row-hide [class^="col-"] {
+    width: 100% !important;
+  }
+}
+
+.row-hide .col-1-of-2 {
+  width: calc((100% - 2rem) / 2);
+  background-color: orangered;
+  float: left;
+}
+
+.row-hide .col-1-of-2:not(:last-child) {
+  margin-right: 2rem;
 }
 
 .container {
